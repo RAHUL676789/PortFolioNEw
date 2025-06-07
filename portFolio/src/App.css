@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import 'remixicon/fonts/remixicon.css';
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#nav{
+    padding: 20px 30px;
+}
+
+li{
+    margin-left: 1rem;
+
+}
+
+.home{
+  padding-top: 0.8rem;
+}
+
+
+
+.homecontaint{
+    padding: 0.5rem;
+}
+
+
+.overflow-hide::-webkit-scrollbar{
+    display: none;
+}
