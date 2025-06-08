@@ -25,6 +25,7 @@ const ProjectsSection = ({ arr, github, link, projectName }) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
+            scrub:1,
             start: "top 80%",
                toggleActions: "restart none none reset",
           },
