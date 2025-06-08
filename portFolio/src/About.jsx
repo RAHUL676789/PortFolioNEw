@@ -44,11 +44,11 @@ const ProjectsSection = ({ arr, github, link, projectName }) => {
     <Element
       ref={sectionRef}
       name="projects"
-      className="w-full mb-20  flex flex-col items-center py-10 px-4 sm:px-8"
+      className="w-full h-screen overflow-scroll overflow-hide mb-20  flex flex-col items-center py-10 px-4 sm:px-8"
     >
       <div
         ref={(el) => (cardRefs.current[0] = el)}
-        className="relative w-full max-w-3xl h-[240px] sm:h-[300px] md:h-[360px] lg:h-[400px] flex items-center justify-center"
+        className="relative w-full max-w-3xl h-[350px] sm:h-[400px] md:h-[400px] lg:h-[400px] flex items-center justify-center"
       >
         <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg group">
           {/* Background Image */}

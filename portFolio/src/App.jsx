@@ -121,23 +121,7 @@ const App = () => {
 
   })
 
-  let handleImgeNext = (arr) => {
 
-    if (index < arr.length - 1) {
-      setIndex((prev) => prev + 1)
-    }
-    if (index == arr.length - 1) {
-      setIndex((prev) => arr.length % arr.length)
-    }
-  }
-
-
-  let handleImgePrev = (arr) => {
-    console.log(arr)
-    if (index < arr.length && index > 0) {
-      setIndex((prev) => prev - 1)
-    }
-  }
 
   let handleGuitar = (dets) => {
     console.log(dets)
@@ -483,12 +467,12 @@ console.log(serviceId,templateId,publicKey)
 
 
   return (
-    <div className="main font-sans ">
+    <div className="main font-sans w-full">
       <div ref={cursorRef} className="cursor h-3 w-3 fixed rounded-full bg-red-500 z-10000"></div>
       {/* Navbar */}
       <nav
         id="nav"
-        className="fixed    backdrop-blur-2xl font-light top-0 left-0 w-full h-16 bg-[#fff] text-white shadow z-50  flex justify-between items-center px-14"
+        className="fixed    backdrop-blur-2xl font-light top-0 left-0 w-screen h-16 bg-[#fff] text-white shadow z-50  flex justify-between items-center px-14"
       >
         <div className="relative  resume group inline-block  overflow-hidden shadow-md">
           <button onClick={()=>(
@@ -506,27 +490,27 @@ console.log(serviceId,templateId,publicKey)
 
         <ul className=" gap-8 font-medium hidden mainNav md:flex border">
           <li className={`${navLinkClass}  mainNav1`}>
-            <Link to="home" spy={true} key="home"   activeClass="text-green-500" smooth={true} duration={500} className="cursor-pointer text-black">
+            <Link offset={-80} to="home" spy={true} key="home"   activeClass="text-green-500" smooth={true} duration={500} className="cursor-pointer text-black">
               Home
             </Link>
           </li>
           <li className={`${navLinkClass} mainNav1`}>
-            <Link spy={true} key="about" to="about"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
+            <Link offset={-80} spy={true} key="about" to="about"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
               About
             </Link>
           </li>
           <li className={`${navLinkClass} mainNav1`}>
-            <Link spy={true} key='projects' to="projects"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
+            <Link offset={-1650} spy={true} key='projects' to="projects"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
               Projects
             </Link>
           </li>
           <li className={`${navLinkClass} mainNav1`}>
-            <Link spy={true} key="skills" to="skills"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-pink-400">
+            <Link offset={-80} spy={true} key="skills" to="skills"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-pink-400">
               Skills
             </Link>
           </li>
           <li className={`${navLinkClass} mainNav1`}>
-            <Link spy={true} key="contact" to="contact"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
+            <Link offset={-80} spy={true} key="contact" to="contact"  activeClass="text-green-500"  smooth={true} duration={500} className="cursor-pointer text-black">
               Contact
             </Link>
           </li>
@@ -577,9 +561,9 @@ console.log(serviceId,templateId,publicKey)
               I build responsive web applications with modern technologies and write optimized code to solve real-world problems.
             </p>
             <div className="mt-10 flex gap-2 justify-center items-center">
-              <a href='https://www.linkedin.com/in/rahul-lodhi/' target='_blank' rel='noopener noreferrer' className="ri-linkedin-line text-xl text-[#0077B5] bg-white/10 backdrop-blur-sm border border-[#0077B5] px-2 py-1 rounded-lg hover:bg-[#0077B5] hover:text-white transition-colors duration-300 cursor-pointer" />
-              <a href='https://instagram.com/rahull0dhi45' target='_blank' className="ri-instagram-line text-xl text-pink-500 bg-white/10 backdrop-blur-sm border border-pink-500 px-2 py-1 rounded-lg hover:bg-pink-600 hover:text-white transition-colors duration-300 cursor-pointer" />
-              <a href='https://github.com/RAHUL676789' target='_blank' className="ri-github-line text-xl text-gray-300 bg-white/10 backdrop-blur-sm border border-gray-500 px-2 py-1 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-300 cursor-pointer" />
+              <a href='https://www.linkedin.com/in/rahul-lodhi/' target='_blank' rel='noopener noreferrer' className="ri-linkedin-line text-xl text-[#0077B5] bg-white/10 backdrop-blur-sm border border-[#0077B5] px-2 py-1 rounded-full hover:bg-[#0077B5] hover:text-white transition-colors duration-300 cursor-pointer" />
+              <a href='https://instagram.com/rahull0dhi45' target='_blank' className="ri-instagram-line text-xl text-pink-500 bg-white/10 backdrop-blur-sm border border-pink-500 px-2 py-1 rounded-full hover:bg-pink-600 hover:text-white transition-colors duration-300 cursor-pointer" />
+              <a href='https://github.com/RAHUL676789' target='_blank' className="ri-github-line text-xl text-gray-300 bg-white/10 backdrop-blur-sm border border-gray-500 px-2 py-1 rounded-full hover:bg-gray-800 hover:text-white transition-colors duration-300 cursor-pointer" />
             </div>
           </div>
           <div className="img hidden md:block p-0.5 mt-8 rounded-full bg-pink-400 border-4 border-teal-800">
@@ -588,8 +572,8 @@ console.log(serviceId,templateId,publicKey)
         </div>
       </Element>
 
-      <div onMouseMove={handleGuitar} onMouseLeave={guitarMove} className="guitar w-full bg-white mt-4 ">
-        <svg width="1017" height="150" className='bg-white'>
+      <div onMouseMove={handleGuitar} onMouseLeave={guitarMove} className="guitar w-screen bg-white mt-4 ">
+        <svg width="screen" height="150" className='bg-white'>
           <path
             d="M 10 80 Q 500 75, 900 80"
             stroke="black"
@@ -597,7 +581,7 @@ console.log(serviceId,templateId,publicKey)
         </svg>
       </div>
 
-      <Element name="about" className="w-full min-h-screen py-8 bg-[#D1D5DC] text-gray-800 px-4">
+      <Element name="about" className="w-full min-h-screen py-4 mt-4 bg-[#D1D5DC] text-gray-800 px-4">
         <div ref={h2parentRef} className="max-w-7xl mx-auto h-full flex flex-col justify-center items-center">
           <h2 ref={h2ref} className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-teal-800 mb-8">
             About Me
@@ -636,7 +620,8 @@ console.log(serviceId,templateId,publicKey)
 
       {/* Project Card Layout */}
 
-      <h2 className="prb text-center text-4xl mb-4 font-bold text-teal-600">
+    
+        <h2 className="prb text-center text-4xl mb-4 font-bold text-teal-600">
         Projects
       </h2>
 
@@ -644,6 +629,10 @@ console.log(serviceId,templateId,publicKey)
         <ProjectsSection arr={value.arr} github={value.github} link={value.link} projectName={value.projectName} />
       ))}
 
+
+     
+
+      
 
       <Element
         name="skills"
