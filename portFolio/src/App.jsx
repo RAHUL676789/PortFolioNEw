@@ -475,11 +475,9 @@ console.log(serviceId,templateId,publicKey)
         className="fixed    backdrop-blur-2xl font-light top-0 left-0 w-screen h-16 bg-[#fff] text-white shadow z-50  flex justify-between items-center px-14"
       >
         <div className="relative  resume group inline-block  overflow-hidden shadow-md">
-          <button onClick={()=>(
-            window.open("../public/Resume.pdf")
-          )} className="relative z-10 px-8 py-3 font-semibold text-white bg-black/80 backdrop-blur-md border border-white  transition-all duration-300 group-hover:text-white cursor-pointer" title='view Resume'>
+          <a href='/Resume.pdf' target='_blank' rel='noopener noreferrer' className="relative z-10 px-8 py-3 inline-block font-semibold text-white bg-black/80 backdrop-blur-md border border-white  transition-all duration-300 group-hover:text-white cursor-pointer" title='view Resume'>
             Resume
-          </button>
+          </a>
 
           {/* Animated background span */}
           <span className="absolute inset-0 z-0 scale-x-0 origin-left transform transition-transform duration-500 ease-out bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-700 group-hover:scale-x-100"></span>
